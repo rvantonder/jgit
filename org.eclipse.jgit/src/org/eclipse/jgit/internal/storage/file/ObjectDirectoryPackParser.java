@@ -445,7 +445,7 @@ public class ObjectDirectoryPackParser extends PackParser {
 		final File finalIdx = new File(packDir, "pack-" + name + ".idx"); //$NON-NLS-1$ //$NON-NLS-2$
 		final PackLock keep = new PackLock(finalPack, db.getFS());
 
-		if (!packDir.exists() && !packDir.mkdir() && !packDir.exists()) {
+		if (!packDir.exists() && !packDir.mkdir()) {
 			// The objects/pack directory isn't present, and we are unable
 			// to create it. There is no way to move this pack in.
 			//
